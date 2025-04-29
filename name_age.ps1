@@ -1,9 +1,7 @@
 # Create 2 variables and add them to print result
 
-# variable for name
+# variables for name and age
 $name = "Alice"
-
-# variable for age
 $age = 25
 
 # concat
