@@ -5,7 +5,7 @@
 function network_test {
     param ($cpu_name)
     try {
-        $ping = Test-Connection -ComputerName $cpu_name -Count 1 -ErrorAction Stop
+        Test-Connection -ComputerName $cpu_name -Count 1 -ErrorAction Stop
         Write-Host "$cpu_name is avaliable"
     }
     catch {
