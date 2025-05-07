@@ -1,16 +1,20 @@
 # script to ping several addresses, to-do log list
 
+$log_file = "ping_log.txt" # saves sessions
 
 # ping something with a function try-catch
 function network_test {
     param ($cpu_name)
     try {
-        Test-Connection -ComputerName $cpu_name -Count 1 -ErrorAction Stop
-        Write-Host "$cpu_name is avaliable"
+        $ping = Test-Connection -ComputerName $cpu_name -Count 1 -ErrorAction Stop
+        $message = "$cpu_name is avaliable"
+        Write-Host $message
+        Add-Content -Path @log_file -Value $message
     }
     catch {
-        Write-Host "$cpu_name is not avaliable"
-    }
+        $message = "$cpu_name is not avaliable"
+        Write-Host $message    }
+        Add-Content -Path @log_file -Value $message
 }
 
 
