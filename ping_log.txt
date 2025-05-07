@@ -1,0 +1,7 @@
+localhost is avaliable
+localhost is avaliable
+non-local-host is not avaliable
+8.8.8.8 is avaliable
+8.8.8.8 is avaliable
+dn.se is avaliable
+dn.se is avaliable

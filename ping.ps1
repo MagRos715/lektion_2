@@ -9,12 +9,12 @@ function network_test {
         $ping = Test-Connection -ComputerName $cpu_name -Count 1 -ErrorAction Stop
         $message = "$cpu_name is avaliable"
         Write-Host $message
-        Add-Content -Path @log_file -Value $message
+        Add-Content -Path $log_file -Value $message
     }
     catch {
         $message = "$cpu_name is not avaliable"
         Write-Host $message    }
-        Add-Content -Path @log_file -Value $message
+        Add-Content -Path $log_file -Value $message
 }
 
 
